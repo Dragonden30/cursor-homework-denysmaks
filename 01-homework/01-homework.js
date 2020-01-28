@@ -4,6 +4,11 @@ let PriceHigh = 123.965;
 
 let PriceMid = 90.2345;
 
-let PriceMax = Math.max(PriceLow,PriceHigh,PriceMid)
+let PriceMax = Math.max(PriceLow,PriceHigh,PriceMid);
 
-console.log("MaxNum "+ PriceMax)
+console.log("MaxNum "+ PriceMax);
+
+let PriceMin = Math.min(PriceLow,PriceHigh,PriceMid);
+
+console.log("MinNum "+ PriceMin);
+
