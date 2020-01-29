@@ -63,3 +63,7 @@ let SalePrice = (AnotherSumOfPrices * RandSaleNum).toFixed(2);
 let LostOfPrice = AnotherSumOfPrices/2 - SalePrice;
 
 console.log("The lost of price will be: " + AnotherSumOfPrices/2 + " - " + SalePrice + " -> " + LostOfPrice.toFixed(2));
+
+document.writeln(`Шаблонная строка:
+Максимальное число: ${PriceMax};
+`)
