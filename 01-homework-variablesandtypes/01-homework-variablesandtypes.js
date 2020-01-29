@@ -66,4 +66,13 @@ console.log("The lost of price will be: " + AnotherSumOfPrices/2 + " - " + SaleP
 
 document.writeln(`Шаблонная строка:
 Максимальное число: ${PriceMax};
-`)
+Минимальное число: ${PriceMin};
+Сума цены продуктов: ${SumOfPrices};
+Сума цены продуктов 'floored': ${SumOfFlooredPrices};
+Сума цены продуктов 'ceiled to 100':   ${PriceCeil};
+Округленное меньшую сторону cума цены продуктов:  ${ResultOfEvenOdd};
+Сдача из 500: ${ChargeFromSum};
+Средняя цена: ${MidPrice.toFixed(2)};
+Скидка: ${RandSaleNum*100}%;
+Потеря прибыли будет: ${AnotherSumOfPrices/2} - ${SalePrice} -> ${LostOfPrice.toFixed(2)};
+`);
