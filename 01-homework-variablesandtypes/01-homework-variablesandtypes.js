@@ -64,15 +64,15 @@ let LostOfPrice = AnotherSumOfPrices/2 - SalePrice;
 
 console.log("The lost of price will be: " + AnotherSumOfPrices/2 + " - " + SalePrice + " -> " + LostOfPrice.toFixed(2));
 
-document.writeln(`Шаблонная строка:
-Максимальное число: ${PriceMax};
-Минимальное число: ${PriceMin};
-Сума цены продуктов: ${SumOfPrices};
-Сума цены продуктов 'floored': ${SumOfFlooredPrices};
-Сума цены продуктов 'ceiled to 100':   ${PriceCeil};
-Округленное меньшую сторону cума цены продуктов:  ${ResultOfEvenOdd};
-Сдача из 500: ${ChargeFromSum};
-Средняя цена: ${MidPrice.toFixed(2)};
-Скидка: ${RandSaleNum*100}%;
+document.writeln(`Шаблонная строка:\n
+Максимальное число: ${PriceMax};\n
+Минимальное число: ${PriceMin};\n
+Сума цены продуктов: ${SumOfPrices};\n
+Сума цены продуктов 'floored': ${SumOfFlooredPrices};\n
+Сума цены продуктов 'ceiled to 100':   ${PriceCeil};\n
+Округленное меньшую сторону cума цены продуктов:  ${ResultOfEvenOdd};\n
+Сдача из 500: ${ChargeFromSum};\n
+Средняя цена: ${MidPrice.toFixed(2)};\n
+Скидка: ${RandSaleNum*100}%;\n
 Потеря прибыли будет: ${AnotherSumOfPrices/2} - ${SalePrice} -> ${LostOfPrice.toFixed(2)};
 `);
