@@ -1,78 +1,72 @@
-let PriceLow = 15.678;
+let priceLow = 15.678;
 
-let PriceHigh = 123.965;
+let priceHigh = 123.965;
 
-let PriceMid = 90.2345;
+let priceMid = 90.2345;
 
-let PriceMax = Math.max(PriceLow,PriceHigh,PriceMid);
+let priceMax = Math.max(priceLow,priceHigh,priceMid);
 
-console.log("Maximum number: "+ PriceMax);
+console.log("Maximum number: "+ priceMax);
 
-let PriceMin = Math.min(PriceLow,PriceHigh,PriceMid);
+let priceMin = Math.min(priceLow,priceHigh,priceMid);
 
-console.log("Minimum number: "+ PriceMin);
+console.log("Minimum number: "+ priceMin);
 
-let SumOfPrices = PriceLow + PriceMid + PriceHigh;
+let sumOfPrices = priceLow + priceMid + priceHigh;
 
-console.log("Sum of products:  "+ SumOfPrices);
+console.log("Sum of products:  "+ sumOfPrices);
 
-let PriceLowFloored = Math.floor(PriceLow);
+let priceLowFloored = Math.floor(priceLow);
 
-let PriceHighFloored = Math.floor(PriceHigh);
+let priceHighFloored = Math.floor(priceHigh);
 
-let PriceMidFloored = Math.floor(PriceMid);
+let priceMidFloored = Math.floor(priceMid);
 
-let SumOfFlooredPrices = PriceLowFloored + PriceHighFloored + PriceMidFloored;
+let sumOfFlooredPrices = priceLowFloored + priceHighFloored + priceMidFloored;
 
-console.log("Sum of products 'floored':  "+ SumOfFlooredPrices);
+console.log("Sum of products 'floored':  "+ sumOfFlooredPrices);
 
-let PriceCeil = Math.ceil((PriceLow + PriceHigh + PriceMid)/100)*100;
+let priceCeil = Math.ceil((priceLow + priceHigh + priceMid)/100)*100;
 
-console.log("Sum of products 'ceiled to 100':  "+ PriceCeil);
+console.log("Sum of products 'ceiled to 100':  "+ priceCeil);
 
-let SumOfPricesFlooded = Math.floor(SumOfPrices) 
+let sumOfPricesFlooded = Math.floor(sumOfPrices) 
 
-let SumEvenOrNot = SumOfPricesFlooded % 2 ? true : false;
+const sumEvenOrNot = sumOfPricesFlooded % 2 > 0 ? "Even" : "Odd";
 
-let ResultOfEvenOdd = 0;
+console.log("Flooded sum of products is "+ sumEvenOrNot);
 
-if (SumEvenOrNot = true)
-{ ResultOfEvenOdd = "Even";
-}else{
-    ResultOfEvenOdd = "Odd";
-}; 
+const customerMoney = 500;
 
-console.log("Flooded sum of products is "+ ResultOfEvenOdd);
+let chargeFromSum = customerMoney - sumOfPrices;
 
-let ChargeFromSum = 500 - SumOfPrices;
+console.log("Charge from " + customerMoney + "will be "+ shargeFromSum);
 
-console.log("Charge from 500 will be "+ ChargeFromSum);
+let midPrice = sumOfPrices/3;
 
-let MidPrice = SumOfPrices/3;
+console.log("Midle price of " + midPrice + " with round to 2 number after dot will be "+ midPrice.toFixed(2));
 
-console.log("Midle price of " + MidPrice + " with round to 2 number after dot will be "+ MidPrice.toFixed(2));
+let randSaleNum = (Math.random(100)).toFixed(2);
 
-let RandSaleNum = (Math.random(100)).toFixed(2);
+console.log("The sale: " + randSaleNum*100 +"%");
 
-console.log("The sale: " + RandSaleNum*100 +"%");
+let anotherSumOfPrices = (priceHigh + priceLow).toFixed(2);
 
-let AnotherSumOfPrices = (PriceHigh + PriceLow).toFixed(2);
+let salePrice = (anotherSumOfPrices * randSaleNum).toFixed(2);
 
-let SalePrice = (AnotherSumOfPrices * RandSaleNum).toFixed(2);
+let lostOfPrice = anotherSumOfPrices/2 - salePrice;
 
-let LostOfPrice = AnotherSumOfPrices/2 - SalePrice;
-
-console.log("The lost of price will be: " + AnotherSumOfPrices/2 + " - " + SalePrice + " -> " + LostOfPrice.toFixed(2));
+console.log("The lost of price will be: " + anotherSumOfPrices/2 + " - " + salePrice + " -> " + lostOfPrice.toFixed(2));
 
 document.writeln(`Шаблонная строка:
-Максимальное число: ${PriceMax};
-Минимальное число: ${PriceMin};
-Сума цены продуктов: ${SumOfPrices};
-Сума цены продуктов 'floored': ${SumOfFlooredPrices};
-Сума цены продуктов 'ceiled to 100':   ${PriceCeil};
-Округленное меньшую сторону cума цены продуктов:  ${ResultOfEvenOdd};
-Сдача из 500: ${ChargeFromSum};
-Средняя цена: ${MidPrice.toFixed(2)};
-Скидка: ${RandSaleNum*100}%;
-Потеря прибыли будет: ${AnotherSumOfPrices/2} - ${SalePrice} -> ${LostOfPrice.toFixed(2)};
+Максимальное число: ${priceMax};
+Минимальное число: ${priceMin};
+Сума цены продуктов: ${sumOfPrices};
+Сума цены продуктов 'floored': ${sumOfFlooredPrices};
+Сума цены продуктов 'ceiled to 100':   ${priceCeil};
+Округленное меньшую сторону cума цены продуктов:  ${sumEvenOrNot};
+Сдача из 500: ${chargeFromSum};
+Средняя цена: ${midPrice.toFixed(2)};
+Скидка: ${randSaleNum*100}%;
+Потеря прибыли будет: ${anotherSumOfPrices/2} - ${salePrice} -> ${lostOfPrice.toFixed(2)};
 `);
