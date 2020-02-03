@@ -40,7 +40,7 @@ const customerMoney = 500;
 
 const chargeFromSum = customerMoney - sumOfPrices;
 
-console.log("Charge from " + customerMoney + "will be "+ shargeFromSum);
+console.log("Charge from " + customerMoney + "will be "+ chargeFromSum);
 
 const midPrice = sumOfPrices/3;
 
