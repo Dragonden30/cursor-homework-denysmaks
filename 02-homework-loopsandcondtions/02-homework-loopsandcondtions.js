@@ -2,6 +2,14 @@ let charecterN = prompt(`Enter First Number: `,`0`);
 
 let numberN = parseInt(charecterN);
 
+while ( !numberN ){
+    
+    charecterN = prompt(`Please insert First Number: `,`0`);
+
+    numberN = parseInt(charecterN);
+
+}
+
 console.log(numberN);
 
 console.log(typeof numberN);
@@ -9,6 +17,14 @@ console.log(typeof numberN);
 let charecterM = prompt(`Enter Second Number: `,`0`);
 
 let numberM = parseInt(charecterM);
+
+while ( !numberM ){
+
+    charecterM = prompt(`Please insert the Second Number: `,`0`);
+
+    numberM = parseInt(charecterM);
+
+}
 
 console.log(numberM);
 
