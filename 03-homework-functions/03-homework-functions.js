@@ -148,7 +148,7 @@ let deleteLetters = (letter,word) => {
  
     letter = letter.toLowerCase();
     
-    for (place = 0; place < word.length; place++) {
+    for (let place = 0; place < word.length; place++) {
 
         if (word.charAt(place) == letter) {
     
@@ -160,7 +160,7 @@ let deleteLetters = (letter,word) => {
 
     wordReplaced = word.replace(letter, ``);
 
-    for (cycle = 0; cycle < counter; cycle++){
+    for (let cycle = 0; cycle < counter; cycle++){
 
         wordReplaced = wordReplaced.replace(letter, ``);
         
@@ -178,7 +178,7 @@ let isPolyndrom = (string) => {
 
     let stringLength = string.length;
 
-    for (position = 0; position < stringLength/2; position++) {
+    for (let position = 0; position < stringLength/2; position++) {
 
       if (string[position] !== string[stringLength - 1 - position]) {
 
