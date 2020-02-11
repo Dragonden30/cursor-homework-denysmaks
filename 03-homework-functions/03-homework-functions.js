@@ -17,13 +17,22 @@ let getPowNumber = (userNumberForPower,userPowNumber) => {
 
     let resultOfPow = userNumberForPower;
 
-    for (n=1; n < userPowNumber; n++){
+    if(userPowNumber == 0) {
+        
+        resultOfPow = 1;
+
+    }
+    else {
+
+        for (n=1; n < userPowNumber; n++){
 
         resultOfPow = resultOfPow * userNumberForPower;
 
+        }
+
     }
 
-    return console.log(`Result of getPowNumber function = ` + resultOfPow + `;`);
+    return  resultOfPow;
 
 }
 
@@ -31,15 +40,17 @@ let userNameFixed = (userName) => {
     
     let userNameSliced = userName.slice(1, userName.length);
 
-    return console.log(`Result of userNameFixed = ` + userName[0].toUpperCase() + userNameSliced.toLowerCase() + `;`);
+    return userName[0].toUpperCase() + userNameSliced.toLowerCase();
 
 }
 
 let userBillPayCalc = (userSalary) => {
 
-    let billPrice = userSalary * 0.2;
+    const billSize = 0.2;
 
-    return console.log(`Result of userBillPayCalc =` + (userSalary - billPrice) + ';');
+    let billPrice = userSalary * billSize;
+
+    return userSalary - billPrice;
 
 }
 
@@ -49,7 +60,7 @@ let getRandomInt = (min, max) => {
 
     max = Math.floor(max);
 
-    return console.log(`Result of getRandomInt = ` + (Math.floor(Math.random() * (max - min)) + min) +`;`); 
+    return Math.floor(Math.random() * (max - min + 1)) + min ; 
   
 }
 
@@ -61,31 +72,33 @@ let userLetterCount = (letter, word) => {
  
  letter = letter.toLowerCase();
 
-for (place = 0; place < word.length; place++) {
+for (let place = 0; place < word.length; place++) {
 
     if (word.charAt(place) == letter) {
 
-        counter += 1;
+        counter ++;
 
     }
 
 }
 
-  return console.log(`Result of userLetterCount = ` + counter + `;`);
+  return counter;
 
 }
 
 let convertCurrency = (currency) => {
 
     let convertedCurrency = 0;
+
+    const dollarToHrivna = 24;
  
     if (currency.substr(-1) == `$`) {
     
         currencySliced = Number(currency.slice(0, currency.length-1));
 
-        convertedCurrency = currencySliced * 24;
+        convertedCurrency = currencySliced * dollarToHrivna;
 
-        return console.log(`Result of convertCurrency = ` + convertedCurrency + `;`);
+        return convertedCurrency;
     
     }
     
@@ -93,9 +106,9 @@ let convertCurrency = (currency) => {
 
         currencySliced = Number(currency.slice(0, currency.length-3));
 
-        convertedCurrency = currencySliced / 24;
+        convertedCurrency = currencySliced / dollarToHrivna;
 
-        return console.log(`Result of convertCurrency = ` + convertedCurrency + `;`);
+        return convertedCurrency;
 
     }
 
@@ -121,7 +134,7 @@ let getRandPass = (length) => {
         randNumber = Math.floor(Math.random() * (10**8));
 
     }
-    return console.log(`Result of getRandPass = ` + randNumber + `;`);
+    return randNumber
 
 }
 
@@ -139,7 +152,7 @@ let deleteLetters = (letter,word) => {
 
         if (word.charAt(place) == letter) {
     
-            counter += 1;
+            counter ++;
     
         }
     
@@ -153,29 +166,29 @@ let deleteLetters = (letter,word) => {
         
     }
 
-    return console.log(`Reult of deleteLetters = ` + wordReplaced + `;`);
+    return wordReplaced;
 
 }
 
 let isPolyndrom = (string) => {
 
-    var replaceAllPunctuationMarks = /[^A-Za-z0-9]/g;
+    let replaceAllPunctuationMarks = /[^A-Za-z0-9]/g;
 
     string = string.toLowerCase().replace(replaceAllPunctuationMarks, '');
 
-    var stringLength = string.length;
+    let stringLength = string.length;
 
-    for (var position = 0; position < stringLength/2; position++) {
+    for (position = 0; position < stringLength/2; position++) {
 
       if (string[position] !== string[stringLength - 1 - position]) {
 
-          return console.log(`Result of isPolundome = ` + false + `;`);
+          return false;
 
       }
 
     }
 
-    return console.log(`Result of isPolundome = ` + true + `;`);
+    return true;
 
 }
 
@@ -210,19 +223,20 @@ let deleteDuplicateLetter = (string) => {
 
     });
     
-    return console.log(`Result of deleteDuplicateLetter = ` + resultOfUnDublicatism + `.`);
+    return resultOfUnDublicatism;
 }
 
 console.log(`Result of getMaxDigit = ` + getMaxDigit(12365) + `;`);
-getPowNumber(3,6);
-userNameFixed(`KrEkHeAd`);
-userBillPayCalc(12000);
-getRandomInt(6,9);
-userLetterCount(`a`,`Altzgamer`);
-convertCurrency(`1000UAH`);
-convertCurrency(`100$`);
-getRandPass(7);
-deleteLetters(`f`,`Fansy Fransis plays on fanfars`);
-isPolyndrom(`Shrekerhs`);
-deleteDuplicateLetter(`Ekspansia`);
+console.log(`Result of getPowNumber = ` + getPowNumber(3,6) + `;`);
+console.log(`Result of getPowNumber = ` + getPowNumber(3,0) + `;`);
+console.log(`Result of userNameFixed = ` + userNameFixed(`KrEkHeAd`) + `;`);
+console.log(`Result of userBillPayCalc =` + userBillPayCalc(12000) + `;`);
+console.log(`Result of getRandomInt = ` + getRandomInt(6,9) + `;`);
+console.log(`Result of userLetterCount = ` + userLetterCount(`a`,`Altzgamer`) + `;`);
+console.log(`Result of convertCurrency = ` + convertCurrency(`1000UAH`) + `;`);
+console.log(`Result of convertCurrency = ` + convertCurrency(`100$`) + `;`);
+console.log(`Result of getRandPass = ` + getRandPass(7) + `;`);
+console.log(`Reult of deleteLetters = ` + deleteLetters(`f`,`Fansy Fransis plays on fanfars`) + `;`);
+console.log(`Result of isPolundome = ` + isPolyndrom(`Shrekerhs`) + `;`);
+console.log(`Result of deleteDuplicateLetter = ` + deleteDuplicateLetter(`Ekspansia`) + `.`);
 
