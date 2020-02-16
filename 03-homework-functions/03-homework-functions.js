@@ -1,5 +1,5 @@
 
-let getMaxDigit = (userNumber) => {
+const getMaxDigit = (userNumber) => {
 
     if(userNumber == 0){ 
         
@@ -13,7 +13,7 @@ let getMaxDigit = (userNumber) => {
 
 }
 
-let getPowNumber = (userNumberForPower,userPowNumber) => {
+const getPowNumber = (userNumberForPower,userPowNumber) => {
 
     let resultOfPow = userNumberForPower;
 
@@ -24,7 +24,7 @@ let getPowNumber = (userNumberForPower,userPowNumber) => {
     }
     else {
 
-        for (n=1; n < userPowNumber; n++){
+        for (let n=1; n < userPowNumber; n++){
 
         resultOfPow = resultOfPow * userNumberForPower;
 
@@ -36,7 +36,7 @@ let getPowNumber = (userNumberForPower,userPowNumber) => {
 
 }
 
-let userNameFixed = (userName) => {
+const userNameFixed = (userName) => {
     
     let userNameSliced = userName.slice(1, userName.length);
 
@@ -44,17 +44,17 @@ let userNameFixed = (userName) => {
 
 }
 
-let userBillPayCalc = (userSalary) => {
+const userBillPayCalc = (userSalary) => {
 
     const billSize = 0.2;
 
-    let billPrice = userSalary * billSize;
+    const billPrice = userSalary * billSize;
 
     return userSalary - billPrice;
 
 }
 
-let getRandomInt = (min, max) => {
+const getRandomInt = (min, max) => {
 
     min = Math.ceil(min);
 
@@ -64,7 +64,7 @@ let getRandomInt = (min, max) => {
   
 }
 
-let userLetterCount = (letter, word) => {
+const userLetterCount = (letter, word) => {
 
  let counter = 0;
 
@@ -86,7 +86,7 @@ for (let place = 0; place < word.length; place++) {
 
 }
 
-let convertCurrency = (currency) => {
+const convertCurrency = (currency) => {
 
     let convertedCurrency = 0;
 
@@ -114,13 +114,13 @@ let convertCurrency = (currency) => {
 
     else{
 
-        return console.log(`undefiend`);
+        throw new Error(`Invalid data`);
         
     }
 
 }
 
-let getRandPass = (length) => {
+const getRandPass = (length) => {
 
     let randNumber = 0;
 
@@ -138,7 +138,7 @@ let getRandPass = (length) => {
 
 }
 
-let deleteLetters = (letter,word) => {
+const deleteLetters = (letter,word) => {
 
     let counter = 0;
 
@@ -170,7 +170,7 @@ let deleteLetters = (letter,word) => {
 
 }
 
-let isPolyndrom = (string) => {
+const isPolyndrom = (string) => {
 
     let replaceAllPunctuationMarks = /[^A-Za-z0-9]/g;
 
@@ -192,7 +192,7 @@ let isPolyndrom = (string) => {
 
 }
 
-let deleteDuplicateLetter = (string) => {
+const deleteDuplicateLetter = (string) => {
 
     let nonDublicateLetters = [];
 
@@ -215,7 +215,8 @@ let deleteDuplicateLetter = (string) => {
     });
     
     let resultOfUnDublicatism = nonDublicateLetters.filter(function(lettrerTwo) {
-    if(dyblicatesLetters.indexOf(lettrerTwo) == -1) {
+    
+        if(dyblicatesLetters.indexOf(lettrerTwo) == -1) {
 
         return lettrerTwo;
 
