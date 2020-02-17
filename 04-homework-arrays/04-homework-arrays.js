@@ -50,8 +50,6 @@ const getRandMark = (complexAr) =>{
 
     const max = 5;
     
-    const markRandomizer = Math.floor(Math.random() * (max - min + 1) + min);
-    
     const randMarks = [];
 
     for(let someInt = 0; someInt < complexAr.length; someInt++){
