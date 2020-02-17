@@ -194,9 +194,9 @@ const isPolyndrom = (string) => {
 
 const deleteDuplicateLetter = (string) => {
 
-    let nonDublicateLetters = [];
+    const nonDublicateLetters = [];
 
-    let dyblicatesLetters = [];
+    const dyblicatesLetters = [];
 
     string.split('').filter(function(letter) {
 
@@ -214,7 +214,7 @@ const deleteDuplicateLetter = (string) => {
 
     });
     
-    let resultOfUnDublicatism = nonDublicateLetters.filter(function(lettrerTwo) {
+    const resultOfUnDublicatism = nonDublicateLetters.filter(function(lettrerTwo) {
     
         if(dyblicatesLetters.indexOf(lettrerTwo) == -1) {
 
