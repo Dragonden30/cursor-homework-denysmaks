@@ -55,10 +55,9 @@ const getRandMark = (complexAr) =>{
     for(let someInt = 0; someInt < complexAr.length; someInt++){
 
         const markRandomizer = Math.floor(Math.random() * (max - min + 1) + min);
-
-        const arrInArr = complexAr[someInt].push(markRandomizer)
-
-        randMarks.push(complexAr[someInt]);
+        
+        randMarks.push([...complexAr[someInt], markRandomizer]);
+    
     }
 
     return randMarks;
