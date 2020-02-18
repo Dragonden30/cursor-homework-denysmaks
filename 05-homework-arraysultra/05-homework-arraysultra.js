@@ -170,10 +170,63 @@ const getDividedByFive = (...numbers) =>{
         
     }
 
-    return counterOfEven;
+    return counterOfFive;
 }
 
 const divide = getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2);
 
 console.log(divide);
 
+const replaceBadWords = (string) => {
+    
+    const badWords = [`shit`,`fuck`];
+
+    const stringIntoArr = string.split(` `);
+
+    let result = 0;
+
+    stringIntoArr.forEach(function(word,key){
+
+        badWords.forEach(function(val){
+
+            let from = word.indexOf(val);
+
+            let to = val.length;
+
+            if(from !==-1){
+
+                stringIntoArr[key] = word.replace(val, `****`);
+
+            }
+
+        });
+
+    });
+
+    result = stringIntoArr.join(` `);
+
+    return result;
+
+}
+
+const replace = replaceBadWords(`Are you fucking shiting kidding?`)
+
+console.log(replace);
+
+const divideByThree = function(string){
+
+    let divided = [];
+
+    for(let i = 0; i < string.length; i+=3){
+
+        divided.push(string.substring(i, i+3));
+
+    }
+
+    return divided;
+
+};
+
+const three = divideByThree(`Kidding?`)
+
+console.log(three);
