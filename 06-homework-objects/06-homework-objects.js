@@ -44,9 +44,7 @@ function getAvarageMark(student){
   for(let i in marksArr) {
     totalMarks += marksArr[i];
   }
-  let length = marksArr.length;
-  let avMark = totalMarks/length;
-  return Number(avMark.toFixed(2));
+  return Number((totalMarks/marksArr.length).toFixed(2));
 }
 
 const avg = getAvarageMark(students[0]);
