@@ -1,5 +1,5 @@
 const getRandomArray = (length, min, max) =>{
-    let operatableArray = [];
+    const operatableArray = [];
     for(let intager = 0; intager < length; intager++){
         operatableArray.push(Math.floor(Math.random() * (max-min+1) + min));
     }
@@ -12,26 +12,34 @@ console.log(`Random : ` + random);
 const getModa = (...numbers) => {
 
     let modeNumber = 0;
-    let counter = 0;
     let numberCheck = 0;
+    const unDotArr = [];
+    const counter = [];
+    const modes = [];
+    
     for(let i = 0; i < numbers.length; i++){    
         numberCheck = Math.floor(numbers[i])
         if(numberCheck === numbers[i]){            
-            for(let j = 0; j < i; j++){    
-                if(numbers[j] === numbers[i]){    
-                modeNumber = numbers[j];    
-                counter++;    
-                }    
+            unDotArr.push(numbers[i]);
+        }   
+    }
+    for(let i = 0; i < unDotArr.length; i++){
+        counter[unDotArr[i]] = (counter[unDotArr[i]] || 0) + 1;
+        if (counter[unDotArr[i]] > modeNumber) {
+            modeNumber = counter[unDotArr[i]];
+        }  
+    }
+    for (i in counter)
+        if (counter.hasOwnProperty(i)) {
+            if (counter[i] === modeNumber) {
+                modes.push(Number(i));
             }
-        }
-        else{
-            let remove = numbers.slice(i , 1);
-        }    
-    }    
-    return modeNumber;    
+    }
+    
+    return (modes + ` `);    
 }    
 
-const moda = getModa(40.1,1,1,10.1,20,10.1);
+const moda = getModa(1.1,1,1,1,2,2);
 console.log(`Moda :` + moda);
 
 const getAverage = (...numbers) =>{
@@ -69,9 +77,9 @@ const getMedian = (...numbers) => {
             newArr.push(numbers[i]); 
         }
     }    
-    let sortNumbers = newArr.slice(0).sort((a,b) => a - b);
-    let middle = Math.floor(newArr.length / 2);    
-    let isEven = newArr.length % 2 === 0;
+
+    const middle = Math.floor(newArr.length / 2);    
+    const isEven = newArr.length % 2 === 0;
     
     return isEven ? (newArr[middle] + newArr[middle - 1]) / 2 : newArr[middle];
 }
@@ -81,11 +89,10 @@ console.log("Median : " + median);
 
 const filterEvenNumbers = (...numbers) =>{
     const counterOfEven = [];
-    for(let i = 0; i < numbers.length; i++){
-        if(numbers[i] % 2){            
-            counterOfEven.push(numbers[i]);
-        }        
-    }
+    const notEven = numbers.filter(function(i){
+        return !(numbers[i] % 2);
+    });
+    counterOfEven.push(notEven)
     return counterOfEven;
 }
 
