@@ -88,37 +88,23 @@ const median = getMedian(40.1,1,2.1,10.1,20,10.1);
 console.log("Median : " + median);
 
 const filterEvenNumbers = (...numbers) =>{
-    const counterOfEven = [];
-    const notEven = numbers.filter(function(i){
-        return !(numbers[i] % 2);
-    });
-    counterOfEven.push(notEven)
-    return counterOfEven;
+    const notEven = numbers.filter((i) => i % 2 !== 0);
+    return notEven;
 }
 
 const even = filterEvenNumbers(1,2,3,5,6);
 console.log(`Even : ` + even);
 
 const countPositiveNumbers = (...numbers) =>{
-    let counter = 0;
-    for(let i = 0; i < numbers.length; i++){
-        if(numbers[i] > 0){            
-            counter++;
-        }        
-    }
-    return counter;
+    let counter = numbers.filter((i) => i > 0)
+    return counter.length;
 }
 
 const count = countPositiveNumbers(1, -2, -3, -5, 6);
 console.log(`Count pos : ` + count);
 
 const getDividedByFive = (...numbers) =>{
-    const counterOfFive = [];
-    for(let i = 0; i < numbers.length; i++){
-        if(!(numbers[i] % 5)){            
-            counterOfFive.push(numbers[i]);
-        }        
-    }
+    const counterOfFive = numbers.filter((i) => i % 5 === 0);;
     return counterOfFive;
 }
 
