@@ -36,22 +36,10 @@ function getSubjects(student){
 const subj = getSubjects(students[1]);
 console.log(`Result of function getSubject: ` + subj);
 
-// function getAvarageMark(student){
-//   const {subjects} = student;
-//   const math =  Object.values(subjects);
-//   const marksArr = [].concat(...math);
-//   let totalMarks = 0;
-//   for(let i in marksArr) {
-//     totalMarks += marksArr[i];
-//   }
-//   return Number((totalMarks/marksArr.length).toFixed(2));
-// }
 function getAvarageMark(student){
   const average = Object.values(student.subjects).flat();
   return (average.reduce((a,b) => (a+b)) / average.length).toFixed(2);
 }
-
-
 
 const avg = getAvarageMark(students[0]);
 console.log(`Result of function getAvarageMark: ` + avg);
