@@ -26,8 +26,8 @@ const students = [{
 
 function getSubjects(student){
   const keys = Object.keys(student.subjects);
-  subjectStudent = keys.map(function(value){
-    let subjectUpercase = value.split(`_`).join(` `);
+  let subjectStudent = keys.map(function(value){
+    const subjectUpercase = value.split(`_`).join(` `);
     return subjectUpercase.slice(0,1).toUpperCase()+subjectUpercase.slice(1).toLowerCase();
   });
   return subjectStudent;
@@ -55,7 +55,7 @@ console.log(`Result of function getStudentInfo: `);
 console.log(info);
 
 function getStudentNames(students){
-  studentNames = students.map(function(student){
+  let studentNames = students.map(function(student){
     let {name} = student;
     return student.name;
   });
@@ -74,7 +74,7 @@ function getBestStudent(students){
       winner = i;
     }
   }
-  let {name} = students[winner];
+  const {name} = students[winner];
   return {name};
 }
 
