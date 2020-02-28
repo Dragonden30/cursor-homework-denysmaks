@@ -23,7 +23,7 @@ function getTotalTaxes(country){
 console.log("getTotalTaxes function results :");
 console.log(getTotalTaxes.call(ukraine));
 
-function getTotalTaxes(country){
+function getRandTaxes(country){
     setInterval(() => {
         const min = 1500;
         const max = 2000;
@@ -36,4 +36,5 @@ function getTotalTaxes(country){
     }, 10000);
 }
 
-getTotalTaxes.call(ukraine)
+console.log("getTotalTaxes function results :");
+getRandTaxes.call(ukraine)
