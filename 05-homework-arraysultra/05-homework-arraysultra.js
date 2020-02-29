@@ -29,7 +29,7 @@ const getModa = (...numbers) => {
             modeNumber = counter[unDotArr[i]];
         }  
     }
-    for (i in counter)
+    for (let i in counter)
         if (counter.hasOwnProperty(i)) {
             if (counter[i] === modeNumber) {
                 modes.push(Number(i));
