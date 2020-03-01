@@ -1,4 +1,4 @@
-class student{
+class Student{
     constructor(univercity, course, fullName){
         this.univercity = univercity;
         this.course = course;
@@ -40,7 +40,7 @@ class student{
     }
 }
 
-let studentDenys = new student('National Aviation Univercity in ciry of Kiev.', 4, 'Denys Maksymovych');
+let studentDenys = new Student('National Aviation Univercity in city of Kiev.', 4, 'Denys Maksymovych');
 console.log(studentDenys.getinfo());
 console.log(studentDenys.marks);
 console.log(studentDenys.getAvarageMark());
@@ -55,3 +55,33 @@ studentDenys.recoverStudent();
 console.log(studentDenys.marks);
 studentDenys.marks = 3;
 console.log(studentDenys.marks);
+
+
+class BudgetStudent extends Student{
+    constructor(univercity, course, fullName){
+        super(univercity, course, fullName);
+        this.scholarshipInterval();
+    }
+
+    getScholarship(){
+        if(this.getAvarageMark() >= 4 && this.denied === false){
+            console.log(`Student get its 1300hrn schollarship`);
+        }else{
+            console.log(`Bad marks so no sholarship`);
+        }
+    }
+
+    scholarshipInterval(){
+        setInterval(() => {this.getScholarship();},30000);
+    }
+}
+
+console.log(`---------------------------Advanced------------------------`);
+let studentDanil = new BudgetStudent(`Kentukian Paleozoi Institut in city Kiev.`, 2, `Danis Darvin`);
+studentDanil.getScholarship();
+studentDanil.marks = 4;
+console.log(studentDanil.marks);
+console.log(studentDanil.getAvarageMark());
+studentDanil.marks = 5;
+console.log(studentDanil.marks);
+console.log(studentDanil.getAvarageMark());
