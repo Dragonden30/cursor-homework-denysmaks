@@ -29,7 +29,7 @@ class Student{
         if(this.denied){
             return null;
         }
-        return Number((this.marksArr.reduce(function(a,b){return a+b;})/this.marksArr.length).toFixed(2));
+        return Number(this.marksArr.reduce(function(a,b){return a+b;})/this.marksArr.length);
     }
 
     dismissStudent(){
@@ -61,10 +61,11 @@ class BudgetStudent extends Student{
     constructor(univercity, course, fullName){
         super(univercity, course, fullName);
         this.scholarshipInterval();
+        this.controlMark = 4;
     }
 
     getScholarship(){
-        if(this.getAvarageMark() >= 4 && this.denied === false){
+        if(this.getAvarageMark() >= this.controlMark && !this.denied){
             console.log(`Student get its 1300hrn schollarship`);
         }else{
             console.log(`Bad marks so no sholarship`);
