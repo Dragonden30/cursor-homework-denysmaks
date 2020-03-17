@@ -14,7 +14,7 @@ function sounds(key) {
 const keys = document.querySelectorAll('.key');
 keys.forEach(element => {
     element.addEventListener("click", function () {
-		sounds(this.innerText);
+		sounds(this.getAttribute('data-key'));
 	});
 });
 
