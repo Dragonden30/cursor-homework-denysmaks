@@ -1,0 +1,130 @@
+@font-face{
+    font-family: HamHev;
+    src: url(HAMBH___.ttf);
+}
+
+body {
+    background: url('./image/StarWars_Planet.jpeg') no-repeat;
+    background-color: black;
+    background-size: auto 100%;
+}
+
+.buttons {
+    padding: 20px 0;
+    border-radius: 15px;
+    font-size: 35px;
+    width: 150px;
+    background-color: #000000;
+    text-align: center;
+    border: 2px 2 white;
+    cursor: pointer;
+    color: #f3f160;
+    font-family: HamHev, cursive;
+}
+
+.buttons:hover {
+   transform: scale(1.1);
+   transition: all 0.3s;
+   background-color: #2c2801;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+}
+
+.button-wrapper > .buttons + .buttons {
+    margin-left: 30px;
+}
+
+.users{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 60px;
+}
+
+.user:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.user {
+    width: 300px;
+    background-color:  #000000;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 40px;
+    padding: 10px;
+    border: 2px 2 white;
+    cursor: pointer;
+    color: #f3f160;
+    font-family: HamHev, cursive;
+    font-size: 30px;
+}
+
+.photo {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+}
+
+.planets{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.planets_names{
+    color: #f3f160;
+    font-family: HamHev, cursive;
+    font-size: 40px;
+}
+
+.planets_button_nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.planets_button_nav > .buttons + .buttons {
+    margin-right: 30px;
+}
+
+#next {
+    display: none;
+}
+
+#previous {
+    display: none;
+}
+
+.usersNavigate{
+    display: none;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+#filmNavigate{
+    font-size: 35px;
+    color: #f3f160;
+    height: 40px;
+    font-family: HamHev;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px 2 white;
+    background-color: black;
+    
+}
+
+#helpId{
+    font-size: 35px;
+    font-family: HamHev;
+    color:#f3f160;
+    margin:0;
+}

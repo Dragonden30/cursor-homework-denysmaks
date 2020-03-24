@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Homework #12</title>
+</head>
+<body>
+    <div class="button-wrapper" >
+        <button type="button" class = "buttons" id="button-home"> Home </button>
+        <button type="button" class = "buttons" id="button-people"> Charactes </button>
+        <button type="button" class = "buttons" id="button-planets"> Planets </button>
+    </div>
+    <div class="usersNavigate">
+        <label for="filmNavigate" id="helpId">Type Film (1-7):</label>>
+        <input id="filmNavigate" type="number" required min="1" max="7" maxlength="1" value="2"></br>
+    </div>
+    <div class="users"></div>
+    <div class="planets"></div>
+    <div class="planets_button_nav">
+        <button type="button" class = "buttons" id="next"> Next </button>
+        <button type="button" class = "buttons" id="previous"> Previous </button>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
