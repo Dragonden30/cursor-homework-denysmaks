@@ -72,6 +72,8 @@ body {
 .icon{
     width: 35px;
     height: 35px;
+    border-radius: 50%;
+    border: 2px 2 white;
 }
 
 .planets{
