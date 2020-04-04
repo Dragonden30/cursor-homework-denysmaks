@@ -1,7 +1,8 @@
 const photos ={
 "male": "images/male.png",
 "female": "images/female.png",
-"n/a": "images/na.png"
+"n/a": "images/na.png",
+"undefined": "images/na.png"
 }
 
 const charBtn = document.getElementById('button-people');

@@ -48,6 +48,8 @@ body {
 .user:hover {
     transform: scale(1.1);
     transition: all 0.3s;
+    background-color:  whitesmoke;
+    color: #000000;
 }
 
 .user {
@@ -72,8 +74,6 @@ body {
 .icon{
     width: 35px;
     height: 35px;
-    border-radius: 50%;
-    border: 2px 2 white;
 }
 
 .planets{
