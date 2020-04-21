@@ -1,0 +1,28 @@
+body{
+    background-color: teal;
+}
+.heads{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.homework-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#text{
+    font-size: 14px;
+}
+
+#gen-head{
+    width: 100%;
+}
+
+#font-head{
+    width: 100%;
+}
+
+.font-size{
+    justify-content: center;
+}
