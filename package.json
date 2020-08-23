@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Dragonden30/cursor-homework-denysmaks/issues"
   },
-  "homepage": "https://github.com/Dragonden30/cursor-homework-denysmaks#readme"
+  "homepage": "https://github.com/Dragonden30/cursor-homework-denysmaks#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1"
+  }
 }
