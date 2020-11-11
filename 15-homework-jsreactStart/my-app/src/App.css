@@ -1,0 +1,66 @@
+html{
+  background-color: aqua;
+}
+.App {
+  text-align: justify;
+}
+
+.App-logo {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  left: 95px;
+  top:-155px;
+}
+
+.humanFace{
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px;
+  border-radius: 50%;
+}
+
+.faceName{
+  position: relative;
+  left: 55px;
+  top: -85px;
+  font-size: 24px;
+}
+
+.imgText{
+  position: relative;
+  left: 55px;
+  top: -180px;
+  font-size: 36px;
+}
+
+.Post-header{
+  background-color: red;
+  width: 90%;
+  border-radius: 10px;
+}
+
+.Car-image{
+  position: relative;
+  left: 55px;
+  top: -200px;
+  height: 40%;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.App-header {
+  position: absolute;
+  left: 25%;
+  background-position: center center;
+  background-color: #282c34;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
