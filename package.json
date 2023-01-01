@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Dragonden30/cursor-homework-denysmaks#readme",
   "devDependencies": {
-    "webpack": "^4.44.1"
+    "webpack": "^5.75.0"
   }
 }
